@@ -3,6 +3,7 @@
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
+<<<<<<< HEAD
 app = "billowing-pond-6294"
 primary_region = "den"
 
@@ -24,3 +25,15 @@ primary_region = "den"
   auto_start_machines = true
   min_machines_running = 0
   processes = ["app"]
+=======
+[env]
+  PORT = "8080" # add this
+
+[experimental]
+  auto_rollback = true
+
+[[services]]
+  http_checks = []
+  internal_port = 8080 
+  processes = ["app"]
+>>>>>>> c63ba1b74d0bd5201586442759bfe598ebc493b2
